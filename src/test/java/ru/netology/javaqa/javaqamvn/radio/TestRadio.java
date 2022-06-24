@@ -68,9 +68,9 @@ public class TestRadio {
     @Test
     public void shouldNotIncreaseVolume() {
         Radio radio = new Radio();
-        radio.currentVolume = 10;
+        radio.currentVolume = 100;
         radio.increaseVolume();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
 
@@ -134,6 +134,46 @@ public class TestRadio {
         Radio radio = new Radio();
         radio.prevRadioStation();
         int expected = 9;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+
+    @Test
+    public void shouldNotSwitchForwardSpecifiedRadioStation() {
+        Radio radio = new Radio(84);
+        radio.currentRadioStation = 84;
+        radio.nextRadioStation();
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSwitchForwardSpecifiedRadioStation() {
+        Radio radio = new Radio(84);
+        radio.nextRadioStation();
+        int expected = 1;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSwitchBackSpecifiedRadioStation() {
+        Radio radio = new Radio(84);
+        radio.currentRadioStation = 9;
+        radio.prevRadioStation();
+        int expected = 8;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSwitchToLastSpecifiedRadioStation() {
+        Radio radio = new Radio(84);
+        radio.prevRadioStation();
+        int expected = 84;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }

@@ -1,14 +1,24 @@
 package ru.netology.javaqa.javaqamvn.radio;
 
 public class Radio {
+    private int maxVolume = 100;
+    private int maxRadioStation = 9;
     public int currentRadioStation;
     public int currentVolume;
+
+    public Radio(int maxRadioStation) {
+        this.maxRadioStation = maxRadioStation;
+    }
+
+    public Radio() {
+
+    }
 
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
     public void setCurrentRadioStation(int newCurrentRadioStation) {
-        if (newCurrentRadioStation > 9) {
+        if (newCurrentRadioStation > maxRadioStation) {
             return;
         }
         if (newCurrentRadioStation < 0) {
@@ -23,7 +33,7 @@ public class Radio {
 
 
     public void increaseVolume() {
-        if (currentVolume < 10) {
+        if (currentVolume < maxVolume) {
             currentVolume = currentVolume + 1;
         }
     }
@@ -36,7 +46,7 @@ public class Radio {
 
 
     public void nextRadioStation() {
-        if (currentRadioStation < 9) {
+        if (currentRadioStation < maxRadioStation) {
             currentRadioStation = currentRadioStation + 1;
         } else {
             currentRadioStation = 0;
@@ -46,7 +56,7 @@ public class Radio {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
         } else {
-            currentRadioStation = 9;
+            currentRadioStation = maxRadioStation;
         }
     }
 }
