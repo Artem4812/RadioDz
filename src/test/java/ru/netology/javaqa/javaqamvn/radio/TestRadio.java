@@ -173,7 +173,7 @@ public class TestRadio {
     public void shouldSwitchToLastSpecifiedRadioStation() {
         Radio radio = new Radio(84);
         radio.prevRadioStation();
-        int expected = 84;
+        int expected = 83;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }

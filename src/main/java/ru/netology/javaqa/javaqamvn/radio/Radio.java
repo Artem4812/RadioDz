@@ -3,11 +3,14 @@ package ru.netology.javaqa.javaqamvn.radio;
 public class Radio {
     private int maxVolume = 100;
     private int maxRadioStation = 9;
+
+
     public int currentRadioStation;
     public int currentVolume;
 
     public Radio(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
+
+        this.maxRadioStation = maxRadioStation - 1;
     }
 
     public Radio() {
