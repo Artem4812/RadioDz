@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6bc6cc9-0750-4d0d-b0e4-c3db10ac1538" name="Changes" comment="updateRadio">
+    <list default="true" id="a6bc6cc9-0750-4d0d-b0e4-c3db10ac1538" name="Changes" comment="fixUpdateRadio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/javaqa/javaqamvn/radio/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/javaqa/javaqamvn/radio/Radio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/javaqa/javaqamvn/radio/TestRadio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/javaqa/javaqamvn/radio/TestRadio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +51,8 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRadio.shouldNotSwitchForwardSpecifiedRadioStation">
-    <configuration name="TestRadio.shouldNotSwitchForwardRadioStationn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestRadio.shouldNotSetVolume">
+    <configuration name="TestRadio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radio" />
       <extension name="coverage">
         <pattern>
@@ -61,13 +62,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa.javaqamvn.radio" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.javaqamvn.radio.TestRadio" />
-      <option name="METHOD_NAME" value="shouldNotSwitchForwardRadioStationn" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRadio.shouldNotSetVolume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.javaqa.javaqamvn.radio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.javaqa.javaqamvn.radio" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.javaqamvn.radio.TestRadio" />
+      <option name="METHOD_NAME" value="shouldNotSetVolume" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRadio.shouldNotSwitchForwardSpecifiedRadioStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRadio.shouldNotSetVolumeIfMinus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radio" />
       <extension name="coverage">
         <pattern>
@@ -77,13 +93,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa.javaqamvn.radio" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.javaqamvn.radio.TestRadio" />
-      <option name="METHOD_NAME" value="shouldNotSwitchForwardSpecifiedRadioStation" />
+      <option name="METHOD_NAME" value="shouldNotSetVolumeIfMinus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRadio.shouldSwitchBackSpecifiedRadioStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRadio.shouldSetVolume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radio" />
       <extension name="coverage">
         <pattern>
@@ -93,23 +109,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.javaqa.javaqamvn.radio" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.javaqamvn.radio.TestRadio" />
-      <option name="METHOD_NAME" value="shouldSwitchBackSpecifiedRadioStation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRadio.shouldSwitchForwardSpecifiedRadioStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="radio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.javaqa.javaqamvn.radio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.javaqa.javaqamvn.radio" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.javaqa.javaqamvn.radio.TestRadio" />
-      <option name="METHOD_NAME" value="shouldSwitchForwardSpecifiedRadioStation" />
+      <option name="METHOD_NAME" value="shouldSetVolume" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRadio.shouldNotSwitchForwardSpecifiedRadioStation" />
-        <item itemvalue="JUnit.TestRadio.shouldSwitchForwardSpecifiedRadioStation" />
-        <item itemvalue="JUnit.TestRadio.shouldSwitchBackSpecifiedRadioStation" />
+        <item itemvalue="JUnit.TestRadio.shouldNotSetVolume" />
+        <item itemvalue="JUnit.TestRadio.shouldNotSetVolumeIfMinus" />
+        <item itemvalue="JUnit.TestRadio.shouldSetVolume" />
+        <item itemvalue="JUnit.TestRadio" />
         <item itemvalue="JUnit.TestRadio.shouldSwitchToLastSpecifiedRadioStation" />
-        <item itemvalue="JUnit.TestRadio.shouldNotSwitchForwardRadioStationn" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656097018536</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixUpdateRadio">
+      <created>1656232548894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656232548894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Main" />
     <MESSAGE value="updateRadio" />
-    <option name="LAST_COMMIT_MESSAGE" value="updateRadio" />
+    <MESSAGE value="fixUpdateRadio" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixUpdateRadio" />
   </component>
 </project>
